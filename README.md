@@ -1,25 +1,21 @@
-# Belajar-project-30-hari-rutin
 # Hari-03: Membaca File CSV dengan Pandas
 
 ## 🎯 Tujuan
 - Belajar membaca dataset `.csv` menggunakan `pandas`.
-- Mengeksplorasi data dengan fungsi dasar:
-  - `head()` → menampilkan 5 baris pertama.
-  - `shape` → melihat jumlah baris & kolom.
-  - `columns` → daftar nama kolom.
+- Mengeksplorasi data dengan fungsi dasar: `head()`, `shape`, `columns`, `describe()`.
+
+## 📂 Dataset
+Dataset: `sample.csv`  
+Jumlah baris: X  
+Jumlah kolom: Y  
+Kolom: [daftar kolom yang muncul di file]
 
 ## 🐍 Kode Utama
 ```python
 import pandas as pd
 
-# baca dataset
-df = pd.read_csv("data/Sample.csv")
-
-# tampilkan 5 baris pertama
+df = pd.read_csv("sample.csv")
 print(df.head())
-
-# jumlah baris & kolom
 print("Ukuran dataset:", df.shape)
-
-# statistik deskriptif
+print("Kolom:", df.columns.tolist())
 print(df.describe())
